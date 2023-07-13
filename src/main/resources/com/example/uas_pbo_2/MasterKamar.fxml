@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uas_pbo_2.MasterKamarController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="900.0" style="-fx-background-color: #00C4FF;" text="Manage Room">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <VBox layoutX="66.0" layoutY="93.0" prefHeight="382.0" prefWidth="530.0" spacing="5.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="304.0" AnchorPane.topAnchor="93.0">
+            <children>
+                <TableView fx:id="tbKamar" onMouseClicked="#pilihKamar" prefHeight="218.0" prefWidth="470.0">
+                    <columns>
+                        <TableColumn fx:id="kode_kamar" prefWidth="64.0000228881836" text="Kode" />
+                        <TableColumn fx:id="no_kamar" prefWidth="104.0" text="Nomor Kamar" />
+                        <TableColumn fx:id="jenis_kamar" prefWidth="185.5999755859375" text="Jenis Kamar" />
+                        <TableColumn fx:id="harga_jual" prefWidth="175.20004272460938" text="Harga Jual" />
+                    </columns>
+                </TableView>
+                <GridPane prefHeight="168.0" prefWidth="381.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="132.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="249.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="249.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Kode Kamar" />
+                        <Label layoutX="10.0" layoutY="17.0" text="Nomor Kamar" GridPane.rowIndex="1" />
+                        <Label layoutX="10.0" layoutY="17.0" text="Jenis Kamar" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfKode_kamar" GridPane.columnIndex="1" />
+                        <TextField fx:id="tfNo_kamar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label layoutX="10.0" layoutY="104.0" text="Harga Jual" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfHarga_jual" layoutX="109.0" layoutY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="comboBox" onAction="#jenis_kamar" prefHeight="26.0" prefWidth="214.0" promptText="Pilih" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+            </children>
+
+        </VBox>
+        <VBox layoutX="678.0" layoutY="93.0" prefHeight="286.0" prefWidth="116.0">
+            <children>
+                <Button fx:id="bAdd" alignment="CENTER" contentDisplay="CENTER" minWidth="69.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: maroon;" text="Add" textFill="#f2f2f2" />
+                <Button fx:id="bEdit" mnemonicParsing="false" onAction="#edit" prefHeight="34.0" prefWidth="115.0" style="-fx-background-color: maroon;" text="Edit" textFill="#f2f2f2">
+                    <graphic>
+                        <FontAwesomeIconView fill="#f2ecec" glyphName="PENCIL" size="1.5em" />
+                    </graphic><font>
+                    <Font size="14.0" />
+                </font>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="bDel" mnemonicParsing="false" onAction="#del" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color:maroon;" text="Del" textFill="#eee9e9">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="1.5em" />
+                    </graphic>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="bUpdate" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: maroon;" text="Confirm" textFill="#eeeaea">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView fill="#f5f3f3" glyphName="CHECK" size="1.5em" />
+                    </graphic>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="bCancel" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color:maroon;" text="Cancel" textFill="#f2eeee">
+                    <graphic><FontAwesomeIconView fill="#eee9e9" glyphName="SHARE" size="1.5em" /></graphic>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin></Button>
+            </children>
+        </VBox>
+        <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="101.0" text="Back" />
+    </children>
+</AnchorPane>

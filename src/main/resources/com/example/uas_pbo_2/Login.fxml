@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uas_pbo_2.LoginController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #146C94;">
+
+        </AnchorPane>
+        <AnchorPane prefHeight="400.0" prefWidth="402.0">
+            <children>
+                <Label layoutX="63.0" layoutY="125.0" text="Username" textFill="#171717">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="63.0" layoutY="205.0" text="Password" textFill="#171717">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfUser" layoutX="188.0" layoutY="125.0" />
+                <TextField fx:id="tfPassword" layoutX="188.0" layoutY="201.0" />
+                <Button fx:id="btnLogin" layoutX="139.0" layoutY="256.0" mnemonicParsing="false" onAction="#prosesLogin" prefHeight="32.0" prefWidth="123.0" style="-fx-background-color: darkBlue; -fx-cursor: hand;" text="Login" textAlignment="CENTER" textFill="#f8f5f5">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="22.0" prefHeight="38.0" prefWidth="165.0" text="UAS PBO 4412">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>
